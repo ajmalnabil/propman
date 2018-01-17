@@ -1,24 +1,40 @@
-# README
+# PropMan, A Property Management application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a property management application for
+[*PropMan*](http://www.propman.my/)
+by [Ajmal Nabil](http://www.github.com/ajmalnabil/).
 
-Things you may want to cover:
+## License
 
-* Ruby version
+All source code in the [PropMan](http://www.propman.my/)
+is available jointly under the MIT License and the Beerware License. See
+[LICENSE.md](LICENSE.md) for details.
 
-* System dependencies
+## Getting started
 
-* Configuration
+To get started with the app, clone the repo and then install the needed gems:
 
-* Database creation
+```
+$ bundle install --without production
+```
 
-* Database initialization
+Next, migrate the database:
 
-* How to run the test suite
+```
+$ rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Finally, run the test suite to verify that everything is working correctly:
 
-* Deployment instructions
+```
+$ rails test
+```
 
-* ...
+If the test suite passes, you'll be ready to run the app in a local server:
+
+```
+$ rails server
+```
+
+For more information, see the
+[*PropMan* Property Management Help](http://www.propman.my/help).
