@@ -3,4 +3,9 @@ damien:
   email: damienidris@example.com
   password_digest: <%= User.digest('password') %>
 
+sophie:
+  name: Sophie Ayna
+  email: sophieayna@example.com
+  password_digest: <%= User.digest('password') %>
+
   # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
