@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :properties, dependent: :destroy
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -36,5 +37,11 @@ class User < ApplicationRecord
   # remembers a user in the database for use in persistent sessions
   def forget
     update_attribute(:remember_digest, nil)
+  end
+
+  # Defines a proto-feed.
+  # See "Following users" for the full implementation.
+  def feed
+    Property.where("user_id = ?", id)
   end
 end
